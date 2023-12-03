@@ -13,11 +13,7 @@ except ModuleNotFoundError:
     os.system('pip install mechanize')
     os.system('pip install bs4 httpx')
 #________________PROXY______________#
-try:
-    prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=https&timeout=1000&country=all&ssl=all&anonymity=all').text
-    open('.prox.txt','w').write(prox)
-except Exception as e:
-    pass
+
 
 #________________LOOP______________#
 loop,ok,cp,user = 0,[],[],[]
